@@ -1,15 +1,8 @@
-// import logo from './logo.svg';
 import './App.css';
-import About from './comp/About';
 import Navbar from './comp/Navbar';
 import TextForm from './comp/TextForm';
 import {useState} from 'react';
 import Alert from './comp/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom"
 
 function App() {
   const [mode,setMode] = useState("light"); // Add useState darkMode
@@ -46,20 +39,11 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar title="TextManipulator" aboutTXT="About" cont="Contact" mode={mode} toggleMode={toggleMode}/>
+        <Navbar title="TextManipulator" cont="Contact" mode={mode} toggleMode={toggleMode}/>
         <Alert alertMsg={alertVar}/>
         <div className="container my-3">
-          <Switch>
-            <Route exact path="/about">
-              <About/>
-            </Route>
-            <Route exact path="/">
-              <TextForm heading={"Enter the text to analyze below "} mode={mode} showAlert={showAlert} />
-            </Route>
-          </Switch>
+          <TextForm heading={"Enter the text to analyze below "} mode={mode} showAlert={showAlert} />
         </div>
-      </Router>
     </>
   );
 }
