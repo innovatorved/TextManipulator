@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TextManipulator/static/css/main.25a24cdc.chunk.css",
+    "main.js": "/TextManipulator/static/js/main.85af1a6c.chunk.js",
+    "main.js.map": "/TextManipulator/static/js/main.85af1a6c.chunk.js.map",
+    "runtime-main.js": "/TextManipulator/static/js/runtime-main.8a5d8263.js",
+    "runtime-main.js.map": "/TextManipulator/static/js/runtime-main.8a5d8263.js.map",
+    "static/js/2.545c23a9.chunk.js": "/TextManipulator/static/js/2.545c23a9.chunk.js",
+    "static/js/2.545c23a9.chunk.js.map": "/TextManipulator/static/js/2.545c23a9.chunk.js.map",
+    "static/js/3.a9b0cda6.chunk.js": "/TextManipulator/static/js/3.a9b0cda6.chunk.js",
+    "static/js/3.a9b0cda6.chunk.js.map": "/TextManipulator/static/js/3.a9b0cda6.chunk.js.map",
+    "index.html": "/TextManipulator/index.html",
+    "static/css/main.25a24cdc.chunk.css.map": "/TextManipulator/static/css/main.25a24cdc.chunk.css.map",
+    "static/js/2.545c23a9.chunk.js.LICENSE.txt": "/TextManipulator/static/js/2.545c23a9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a5d8263.js",
+    "static/js/2.545c23a9.chunk.js",
+    "static/css/main.25a24cdc.chunk.css",
+    "static/js/main.85af1a6c.chunk.js"
+  ]
+}
