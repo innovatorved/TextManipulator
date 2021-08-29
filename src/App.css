@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: #eef2e4;
+}
+
+.font-link{
+  font-family: 'Kaisei Decol', serif;
+}
