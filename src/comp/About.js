@@ -32,12 +32,12 @@ export default function About(props) {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
-                    <button className="accordion-button collapsed" type="button" style=
-                    {txtStyle} data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    <button className="accordion-button" type="button" style=
+                    {txtStyle} data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
                         <strong>Why TextManipulator ?</strong> 
                     </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
                     <div className="accordion-body" style={txtStyle}>
                         From length of Space between letters words of text, to the length of space between the words of a sentence, to change in Lower case , Upper case or in Title case .
                     </div>
@@ -45,12 +45,12 @@ export default function About(props) {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="panelsStayOpen-headingThree">
-                    <button className="accordion-button collapsed" type="button" style=
-                    {txtStyle} data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    <button className="accordion-button" type="button" style=
+                    {txtStyle} data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
                         <strong>Browser Compatible & Free To Use</strong> 
                     </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
                     <div className="accordion-body" style={txtStyle}>
                         This word counter software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document etc.
                         Free Word Analysis Statical tool.
