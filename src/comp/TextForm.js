@@ -45,8 +45,13 @@ export default function TextForm(props) {
 
     const clipboard = ()=> {
         /* Copy to ClipBoard */
-        navigator.clipboard.writeText(txt); 
-        props.showAlert("Text Copied !" , "success");
+        if (txt === " " || txt === ""){
+            props.showAlert(" ! Enter the Text to copy" , "info");
+        }
+        else {
+            navigator.clipboard.writeText(txt); 
+            props.showAlert("Text Copied !" , "success");
+        }
     };
     const clearTxt = () => {
         setTxt("");

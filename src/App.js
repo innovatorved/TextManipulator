@@ -3,6 +3,7 @@ import './App.css';
 import About from './comp/About';
 import Navbar from './comp/Navbar';
 import TextForm from './comp/TextForm';
+import Contact from './comp/Contact';
 import {useState} from 'react';
 import Alert from './comp/Alert';
 import {
@@ -10,6 +11,9 @@ import {
   Switch,
   Route,
 } from "react-router-dom"
+
+
+// ----------------------------------------------------------
 
 function App() {
   const [mode,setMode] = useState("light"); // Add useState darkMode
@@ -52,10 +56,13 @@ function App() {
         <div className="container my-3">
           <Switch>
             <Route exact path="/about">
-              <About/>
+              <About mode={mode}/>
+            </Route>
+            <Route exact path="/contact">
+                <Contact mode={mode} showAlert={showAlert}/>
             </Route>
             <Route exact path="/">
-              <TextForm heading={"Enter the text to analyze below "} mode={mode} showAlert={showAlert} />
+              <TextForm heading={"Enter the text to analyze below "} mode={mode} showAlert={showAlert}/>
             </Route>
           </Switch>
         </div>
