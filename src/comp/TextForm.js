@@ -61,7 +61,7 @@ export default function TextForm(props) {
     return (
         <>
             <div className="container" style={txtStyle}>
-                <h2 htmlFor="mybox" className="font-link"><b>{props.heading}</b></h2>
+                <h2 htmlFor="mybox" className="mb-3 font-link"><b>{props.heading}</b></h2>
                 <div className="mb-3">
                 <textarea style={{backgroundColor : props.mode==="dark"?"#667574":"white" , color : props.mode==="dark"?"white":"black"}} spellCheck="false" className="form-control" value={txt} onChange={handleOnChange} id="mybox" rows="8"></textarea>
                 </div>
@@ -79,7 +79,7 @@ export default function TextForm(props) {
                 <p><b>{txt.split(" ").filter(function(val,index, arr){return val !== ""}).length}</b> Words | <b>{txt.length}</b> Characters | <b>{txt.length===0?0:txt.split("\n").length}</b> line</p>
                 <p>Average time to read <b>{txt.length===0?0:0.008*txt.split(" ").length}m</b></p>
                 <h3 className="font-link">Wanna Read</h3>
-                <p>{txt.length>0?txt:"---> Enter something in textbox to Preview"}</p>
+                <p>{txt.length>0?txt:"---> Enter something in textbox to Preview - TextManipulator is Word and character counter | Change text into Upper Case , Lower Case and Title Case | Remove Extra Space and Remove Extra Line "}</p>
             </div>
         </>
         
@@ -88,4 +88,7 @@ export default function TextForm(props) {
 
 TextForm.propTypes = {
     heading : PropTypes.string,
+    mode : PropTypes.string,
+    showAlert : PropTypes.func,
 }
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function About(props) {
     let txtStyle = {
@@ -62,4 +63,6 @@ export default function About(props) {
     )
 }
 
-
+About.propTypes = {
+    mode : PropTypes.string,
+}

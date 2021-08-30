@@ -1,4 +1,5 @@
 import React , { useRef } from 'react';
+import PropTypes from 'prop-types';
 // let mongo = require("mongodb");
 
 export default function Contact(props) {
@@ -73,6 +74,8 @@ export default function Contact(props) {
        </div>
     )
 }
-        
 
-
+Contact.propTypes = {
+    mode : PropTypes.string,
+    showAlert : PropTypes.func,
+}

@@ -9,12 +9,14 @@ const firstTitleCase = (word) => {
 
 export default function Alert(props){
     return (
-        props.alertMsg && 
-        <div>
-            <div className={`alert alert-${props.alertMsg.type} alert-dismissible fade show`} role="alert">
-            <strong>{firstTitleCase(props.alertMsg.type)} </strong> {props.alertMsg.msg}
-            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+        <div style={{height : "40px"}}>
+            {props.alertMsg && 
+            <div>
+                <div className={`alert alert-${props.alertMsg.type} alert-dismissible fade show`} role="alert">
+                <strong>{firstTitleCase(props.alertMsg.type)} </strong> {props.alertMsg.msg}
+                <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>}
         </div>
     )
 }
