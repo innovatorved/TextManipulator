@@ -76,7 +76,7 @@ export default function TextForm(props) {
             </div>
             <div className="container my-3 " style={txtStyle}>
                 <h2 className="font-link">Text Summary</h2>
-                <p><b>{txt.split(" ").filter(function(val,index, arr){return val !== ""}).length}</b> Words | <b>{txt.length}</b> Characters | <b>{txt.length===0?0:txt.split("\n").length}</b> line</p>
+                <p><b>{txt.split(/\s+/).filter(function(val,index, arr){return val !== ""}).length}</b> Words | <b>{txt.length}</b> Characters | <b>{txt.length===0?0:txt.split("\n").length}</b> line</p>
                 <p>Average time to read <b>{txt.length===0?0:0.008*txt.split(" ").length}m</b></p>
                 <h3 className="font-link">Wanna Read</h3>
                 <p>{txt.length>0?txt:"---> Enter something in textbox to Preview - TextManipulator is Word and character counter | Change text into Upper Case , Lower Case and Title Case | Remove Extra Space and Remove Extra Line "}</p>

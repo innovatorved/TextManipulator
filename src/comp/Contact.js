@@ -32,7 +32,7 @@ export default function Contact(props) {
         sub.current.value = "";
         mail.current.value = "";
         msg.current.value = "";
-        console.log(obj1);
+        // console.log(obj1);
         // props.saveCol(obj1);
         props.showAlert("Feedback send Successfully !" , "success");
     };
