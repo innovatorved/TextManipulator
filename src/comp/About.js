@@ -26,7 +26,8 @@ export default function About(props) {
                     </h2>
                     <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne" style={txtStyle}>
                     <div className="accordion-body">
-                        TextManipulator is WebApp can be Used to Manipulate Your text in a variety of ways .
+                        TextManipulator is WebApp can be Used to Manipulate Your text in a variety of ways.
+                        <h5>Text Manipulation</h5> 
                         
                     </div>
                     </div>

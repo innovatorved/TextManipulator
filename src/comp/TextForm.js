@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 import PropTypes from 'prop-types';
-// Use React Hooks & State
-
+import {Link} from 'react-router-dom';
+import downloadIcon from './download.png';
 
 export default function TextForm(props) {
     const [txt , setTxt] = useState("");
@@ -52,12 +52,26 @@ export default function TextForm(props) {
             navigator.clipboard.writeText(txt); 
             props.showAlert("Text Copied !" , "success");
         }
-    };
+       
+    }; 
     const clearTxt = () => {
         setTxt("");
         props.showAlert("Text Cleared !" , "warning");
     }
-
+    const down =()=>{
+        if (txt === "" || txt === " "){
+            props.showAlert("Enter the text into textbox to copy it !" , "warning")
+        }
+        else {
+            let ele = document.createElement("a");
+            ele.setAttribute("href" , "data:text/plain;charset=utf-8," + encodeURIComponent(txt));
+            ele.setAttribute("download" , "file.txt");
+            ele.style.display = "none";
+            document.body.appendChild(ele);
+            ele.click();
+            document.body.removeChild(ele);
+        } 
+    }
     return (
         <>
             <div className="container" style={txtStyle}>
@@ -71,11 +85,15 @@ export default function TextForm(props) {
                 <button className="btn btn-primary me-auto mb-2 mb-lg-0 mx-2" onClick={RemoveExtraSpace}>Remove Extra Spaces</button>
                 <button className="btn btn-primary me-auto mb-2 mb-lg-0 mx-2" onClick={RemoveExtraLine}>Remove Extra Lines</button>
 
-                <button className="btn btn-primary me-auto mb-2 mb-lg-0 mx-2"  onClick={clipboard} title="Copt Text To ClipBoard">Copy to Clipboard</button>
+                <button className="btn btn-primary me-auto mb-2 mb-lg-0 mx-2"  onClick={clipboard} title="Copy Text To ClipBoard">Copy to Clipboard</button>
+                {/* <button className="btn btn-primary me-auto mb-2 mb-lg-0 mx-2" onClick={down} >Download</button> */}
                 <button className="btn btn-primary me-auto mb-2 mb-lg-0 mx-2" onClick={clearTxt}>Clear</button>
+
+                <Link to="" className="me-auto mb-2 mx-2"><img title="Download in text file" src={downloadIcon} alt="Download Text" onClick={down} height="50" width="50"/></Link>
+
             </div>
             <div className="container my-3 " style={txtStyle}>
-                <h2 className="font-link">Text Summary</h2>
+                <h2 className="font-link">Text Summary</h2>    
                 <p><b>{txt.split(/\s+/).filter(function(val,index, arr){return val !== ""}).length}</b> Words | <b>{txt.length}</b> Characters | <b>{txt.length===0?0:txt.split("\n").length}</b> line</p>
                 <p>Average time to read <b>{txt.length===0?0:0.008*txt.split(" ").length}m</b></p>
                 <h3 className="font-link">Wanna Read</h3>
@@ -91,4 +109,3 @@ TextForm.propTypes = {
     mode : PropTypes.string,
     showAlert : PropTypes.func,
 }
-

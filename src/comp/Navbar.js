@@ -22,11 +22,6 @@ export default function Navbar(probs) {
                   <Link to="/contact" className="nav-link">{probs.cont}</Link>
               </li>
             </ul>
-
-            {/* <form className="d-flex">
-              <input className="form-control me-auto mb-2 mb-lg-0" type="search" placeholder="Search" aria-label="Search"/>
-              <button className="btn btn-outline-success mx-1" type="submit">Search</button>
-            </form> */}
             <div className="form-check form-switch ">
               <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onClick={probs.toggleMode}/>
               <label className={`form-check-label text-${probs.mode==="light"?"dark":"light"} mx-2`} htmlFor="flexSwitchCheckDefault">Dark Mode</label>
