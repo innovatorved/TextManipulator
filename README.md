@@ -1,6 +1,3 @@
-
-![Logo](https://raw.githubusercontent.com/innovatorved/TextManipulator/gh-pages/text-manipulator.png)
-
 # TextManipulator
 
 Modern text manipulation web app: clean up spacing/lines, change casing, copy/download, and view quick stats.
