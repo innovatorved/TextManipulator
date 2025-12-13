@@ -1,16 +1,41 @@
 
 ![Logo](https://raw.githubusercontent.com/innovatorved/TextManipulator/gh-pages/text-manipulator.png)
 
-    
+# TextManipulator
 
-# Text Manipulator
+Modern text manipulation web app: clean up spacing/lines, change casing, copy/download, and view quick stats.
 
-TextManipulator basically a Text Manipulation WebApp can be Used to Manipulate your text 
+## Tech
 
+- React + React Router
+- Vite (build/dev)
+- Tailwind CSS (no Bootstrap)
+- Bun (package manager + scripts)
 
-## Demo
+## Local development
 
-Visit : https://bit.ly/textmanipulator
+Install dependencies:
+
+`bun install`
+
+Run dev server:
+
+`bun run dev`
+
+Production build:
+
+`bun run build`
+
+Preview the production build locally:
+
+`bun run preview`
+
+## Deployment
+
+This is a standard Vite app. The build output is in `dist/`.
+
+- Netlify/Vercel: set build command to `bun run build` and publish directory to `dist`.
+- Any static host: upload the `dist/` folder contents.
 
    
 

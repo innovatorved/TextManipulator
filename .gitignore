@@ -11,6 +11,11 @@ node_modules/
 
 # production
 /build
+/dist
+/dist
+
+# vite
+.vite/
 
 # misc
 .DS_Store
@@ -22,6 +27,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# bun
+bun.lock
 
 /.firebase
 /.firebase/
