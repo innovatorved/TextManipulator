@@ -11,7 +11,7 @@ export default function Navbar({
   mode,
   toggleMode,
 }: NavbarProps) {
-    return (
+  return (
     <header className="border-b border-slate-200 bg-white/70 backdrop-blur dark:border-slate-800 dark:bg-slate-950/60">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center justify-between">
@@ -32,6 +32,6 @@ export default function Navbar({
         </nav>
       </div>
     </header>
-    )
+  )
 }
 

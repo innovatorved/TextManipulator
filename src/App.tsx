@@ -17,10 +17,10 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      showAlert("Dark Mode is Enable", "success");
+      showAlert("Dark Mode enabled", "success");
     } else {
       setMode("light");
-      showAlert("Bright Mode is Enable", "success");
+      showAlert("Light Mode enabled", "success");
     }
   };
 
@@ -41,23 +41,49 @@ function App() {
     });
     setTimeout(() => {
       setAlert(null);
-    }, 2000);
+    }, 2500);
   };
 
   return (
-    <>
-      <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-        <Navbar title="TextManipulator" mode={mode} toggleMode={toggleMode} />
-        <Alert alertMsg={alertVar} />
+    <div
+      className="min-h-screen bg-pattern transition-colors duration-300"
+      style={{ background: 'var(--color-bg)' }}
+    >
+      <Navbar title="TextManipulator" mode={mode} toggleMode={toggleMode} />
+      <Alert alertMsg={alertVar} />
 
-        <main className="mx-auto w-full max-w-5xl px-4 py-8">
+      {/* Hero gradient background */}
+      <div className="hero-gradient">
+        <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:py-12">
           <TextForm
-            heading={"Modern text tools — clean, transform, and analyze"}
+            heading={"Transform Your Text Instantly"}
             showAlert={showAlert}
           />
         </main>
       </div>
-    </>
+
+      {/* Footer */}
+      <footer
+        className="border-t py-6 text-center text-sm"
+        style={{
+          borderColor: 'var(--color-border)',
+          color: 'var(--color-text-muted)',
+        }}
+      >
+        <p>
+          Built with ❤️ by{' '}
+          <a
+            href="https://vedgupta.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium transition-colors hover:underline"
+            style={{ color: 'var(--color-accent)' }}
+          >
+            Ved Gupta
+          </a>
+        </p>
+      </footer>
+    </div>
   );
 }
 
